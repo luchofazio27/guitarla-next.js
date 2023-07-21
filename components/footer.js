@@ -14,12 +14,12 @@ export default function Footer() {
                 Nosotros
             </Link>
 
-            <Link href='/blog'>
-                Blog
-            </Link>
-
             <Link href='/store'>
                 Tienda
+            </Link>
+
+            <Link href='/blog'>
+                Blog
             </Link>
         </nav>
 
