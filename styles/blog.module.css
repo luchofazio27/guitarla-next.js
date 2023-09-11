@@ -29,7 +29,7 @@
 }
 
 
-.enlace {
+.link {
     margin-top: 2rem;
     display: block;
     background-color: var(--black);
@@ -43,6 +43,6 @@
     transition-property: background-color;
     transition-duration: 300ms;
 }
-.enlace:hover {
+.link:hover {
     background-color: var(--primary);
 }

@@ -1,4 +1,4 @@
-.curso {
+.course {
     padding: 10rem 0;
     margin-top: 10rem;
     background-size: cover;
@@ -10,12 +10,12 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .contenido {
+    .content {
         grid-column: 2 / 3;
     }
 }
 
-.curso p {
+.course p {
     text-align: center;
     font-size: 2.4rem;
     color: var(--white);
