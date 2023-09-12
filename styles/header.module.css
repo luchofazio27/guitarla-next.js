@@ -9,12 +9,7 @@
     flex-direction: column;
     align-items: center;
 }
-.bar img {
-    height: auto;
-    width: 25rem;
-    max-width: 40rem;
-    max-height: 70rem;
-}
+
 @media (min-width: 768px) {
     .bar {
         flex-direction: row;
@@ -24,6 +19,9 @@
 
 .navigation {
     margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 @media (min-width: 768px) {
     .navigation {
