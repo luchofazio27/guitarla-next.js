@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
-  const [cart, setCart] = useState([]);
+  const cartLS = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('cart')) ?? [] : []
+  const [cart, setCart] = useState(cartLS)
+  const [pagOk, setPagOk] = useState(false)
+
+  useEffect(() => {
+    setPagOk(true)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
 
   const addCart = (guitar) => {
     // Comprobar si la guitarra ya esta en el carrito...
@@ -41,13 +51,13 @@ export default function App({ Component, pageProps }) {
     window.localStorage.setItem("cart", JSON.stringify(cart));
   };
 
-  return (
+  return pagOk ?
     <Component
       {...pageProps}
       cart={cart}
       addCart={addCart}
       deleteProduct={deleteProduct}
       updateAmount={updateAmount}
-    />
-  );
+    /> : null
+  ;
 }
